@@ -1,0 +1,404 @@
+{
+    "examName": "Sample Exam",
+    "class": "Class 10",
+    "date": "2025-02-22",
+    "time": "10:00",
+    "term": "Term 1",
+    "section": "A",
+    "session": "2024-2025",
+    "questions": [
+        {
+            "question": "What is the capital of France?",
+            "type": "multiple-choice",
+            "options": [
+                "Berlin",
+                "Madrid",
+                "Paris",
+                "Rome"
+            ],
+            "answer": "Paris"
+        },
+        {
+            "question": "Solve the equation: 2x + 3 = 7",
+            "type": "short-answer",
+            "answer": "2"
+        },
+        {
+            "question": "Describe the process of photosynthesis.",
+            "type": "long-answer",
+            "answer": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll."
+        }
+    ]
+}
+{
+    "admin": [
+        "id",
+        "name",
+        "email",
+        "password",
+        "role",
+        "photo",
+        "phone",
+        "address",
+        "createdAt",
+        "isActive"
+    ],
+    "exam": [
+        "id",
+        "examName",
+        "class",
+        "date",
+        "time",
+        "term",
+        "section",
+        "session",
+        "questions"
+    ],
+    "teacher": [
+        "id",
+        "name",
+        "email",
+        "password",
+        "role",
+        "classes",
+        "subjects",
+        "photo",
+        "phone",
+        "address",
+        "createdAt",
+        "isActive",
+        "section",
+        "session",
+        "examsId"
+    ],
+    "student": [
+        "id",
+        "name",
+        "email",
+        "password",
+        "role",
+        "class",
+        "subjects",
+        "photo",
+        "parent_id",
+        "address",
+        "createdAt",
+        "isActive",
+        "section",
+        "session",
+        "username"
+    ],
+    "parent": [
+        "id",
+        "name",
+        "email",
+        "password",
+        "role",
+        "photo",
+        "phone",
+        "address",
+        "createdAt",
+        "isActive",
+        "students"
+    ],
+    "lessons": [
+        "id",
+        "title",
+        "subject",
+        "class",
+        "section",
+        "term",
+        "content",
+        "createdAt",
+        "isActive"
+    ],
+    "profile": [
+        "id",
+        "bio",
+        "userId",
+        "bloodGroup",
+        "dob",
+        "qualification"
+    ],
+    "result": [
+        "id",
+        "examId",
+        "studentId",
+        "ca_score",
+        "exam_score",
+        "section",
+        "session"
+    ],
+    "classes": [
+        "id",
+        "name",
+        "section",
+        "subjects"
+    ],
+    "subject": [
+        "id",
+        "name",
+        "classes",
+        "teacher",
+        "createdAt",
+        "isActive"
+    ],
+    "examResponse": [
+        "id",
+        "examId",
+        "userId",
+        "responses"
+    ],
+    "section": [
+        "id",
+        "name",
+        "classes",
+        "createdAt",
+        "isActive"
+    ],
+    "session": [
+        "id",
+        "name",
+        "term",
+        "createdAt",
+        "isActive"
+    ],
+    "announcement": [
+        "id",
+        "title",
+        "content",
+        "class",
+        "section",
+        "session",
+        "createdAt",
+        "isActive",
+        "userId"
+    ],
+    "attendance": [
+        "id",
+        "userId",
+        "class",
+        "section",
+        "session",
+        "date",
+        "status",
+        "createdAt",
+        "role"
+    ],
+    "assignment": [
+        "id",
+        "title",
+        "content",
+        "class",
+        "section",
+        "session",
+        "subject",
+        "dueDate",
+        "createdAt",
+        "isActive",
+        "userId"
+    ],
+    "post": [
+        "id",
+        "title",
+        "content",
+        "class",
+        "section",
+        "session",
+        "createdAt",
+        "isActive",
+        "userId",
+        "published"
+    ],
+    "comment": [
+        "id",
+        "postId",
+        "content",
+        "createdAt",
+        "isActive",
+        "userId"
+    ],
+    "message": [
+        "id",
+        "content",
+        "sender",
+        "receiver",
+        "createdAt",
+        "isActive"
+    ],
+    "notification": [
+        "id",
+        "content",
+        "receiver",
+        "createdAt",
+        "isActive"
+    ],
+    "feedback": [
+        "id",
+        "content",
+        "sender",
+        "receiver",
+        "createdAt",
+        "isActive"
+    ],
+    "complaint": [
+        "id",
+        "content",
+        "sender",
+        "receiver",
+        "createdAt",
+        "isActive"
+    ],
+    "event": [
+        "id",
+        "title",
+        "content",
+        "date",
+        "time",
+        "venue",
+        "createdAt",
+        "isActive"
+    ]
+},
+[
+    [
+        "name" => "Kg",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Pre-Gold",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Pre-Silver",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Pre-Diamond",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Pre-Platinum",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Pre-Ruby",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Pre-Sapphire",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Pre-Emarald",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Pre-Pearl",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 1 Gold",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 1 Silver",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 1 Diamond",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 1 Platinum",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 1 Ruby",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 1 Sapphire",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 1 Emarald",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 1 Pearl",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 2 Gold",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 2 Silver",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 2 Diamond",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 2 Platinum",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 2 Ruby",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 2 Sapphire",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 2 Emarald",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Nursery 2 Pearl",
+        "section" => "nursery"
+    ],
+    [
+        "name" => "Year 1 Gold",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 1 Silver",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 2 Gold",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 2 Silver",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 3 Gold",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 3 Silver",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 4 Gold",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 4 Silver",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 5 Gold",
+        "section" => "primary"
+    ],
+    [
+        "name" => "Year 5 Silver",
+        "section" => "primary"
+    ],
+]

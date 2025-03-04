@@ -1,0 +1,189 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+}
+
+table>tbody>tr>th {
+    background-color: rgb(130, 6, 130);
+    color: #fff;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+}
+
+.smaller-text {
+    font-size: 12px;
+    color: black;
+    margin: 0px 0px 0px 0px;
+}
+
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header>h2 {
+    color: rgb(130, 6, 130);
+}
+
+#main-head {
+    background-color: rgb(130, 6, 130);
+}
+
+.sub-header {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.containerr {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: rgb(130, 6, 130);
+    color: #fff;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add new styles for individual results */
+.student-result {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.student-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 18px;
+    text-align: left;
+    /* border: solid 1px black; */
+}
+
+.info-column {
+    padding: 0 10px;
+    margin: -15px 0px 0px 0px;
+    border: solid 1px black;
+
+}
+
+.small-text {
+    font-size: 16px;
+    color: black;
+}
+
+/*Table result details styling*/
+
+.result-details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-details-table th,
+.result-details-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.result-details-table th {
+    background-color: rgb(130, 6, 130);
+    color: #fff;
+}
+
+h1 {
+    margin: 0px 0px 0px 0px;
+    color: rgb(130, 6, 130);
+}
+
+.result-details-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.result-details-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+td {
+    text-align: left;
+}
+
+/*Table styling*/
+#affectiveTraits {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#affectiveTraits th,
+#affectiveTraits td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#affectiveTraits th {
+    background-color: rgb(130, 6, 130);
+    color: white;
+}
+
+#affectiveTraits tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#affectiveTraits tr:hover {
+    background-color: #ddd;
+}
+
+#generate-pdf-btn {
+    background-color: lightgreen;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+}

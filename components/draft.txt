@@ -1,0 +1,336 @@
+<?php 
+$user = "Abdoul";
+$category = "Admin";
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --primary: rgb(168,81,138);
+      }
+    </style>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <?php require'./components/financeChart.php'; ?>
+     <?php require'./components/pieChart.php'; ?>    
+</head>
+<body>
+    <?php if ($user == 'Abdul') { ?> <h1>Dashboard</h1><?php }; ?>
+    <div class="h-screen flex>
+       <?php require'./components/sidebar.php'; ?>
+        </div>
+        <div class="middle w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll flex flex-col">
+        <?php require'./components/middlebar.php'; ?>    
+        </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+MIDDLE BAR
+<div class="flex flex-col items-center justify-center">
+              <div class="counter px-1 py-2">
+                <div class="counter-list grid grid-cols-4 lg:grid-cols-2 gap-1">
+                  <div class="rounded-2xl p-4 flex-1 min-w-[130px] bg-[rgb(168,81,138)]">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[10px] bg-white px-2 py-1 rounded-full text-green-600">
+                        2024/25
+                        </span>
+                        <Image src="./images/more.png" alt="" width="20" height="20" />
+                      </div>
+                      <h1 class="text-2xl font-semibold my-4 text-white">2,100</h1>
+                      <h2 class="capitalize text-sm font-medium text-white">Students</h2>
+                  </div>
+                  <div class="rounded-2xl p-4 flex-1 min-w-[130px] bg-green-600">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[10px] bg-white px-2 py-1 rounded-full text-green-600">
+                        2024/25
+                        </span>
+                        <Image src="./images/more.png" alt="" width="20" height="20" />
+                      </div>
+                      <h1 class="text-2xl font-semibold my-4 text-white">2,100</h1>
+                      <h2 class="capitalize text-sm font-medium text-white">Teachers</h2>
+                  </div>
+                  <div class="rounded-2xl  p-4 flex-1 min-w-[130px] bg-[rgb(168,81,138)]">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[10px] bg-white px-2 py-1 rounded-full text-green-600">
+                        2024/25
+                        </span>
+                        <Image src="./images/more.png" alt="" width="20" height="20" />
+                      </div>
+                      <h1 class="text-2xl font-semibold my-4 text-white">2,100</h1>
+                      <h2 class="capitalize text-sm font-medium text-white">Parents</h2>
+                  </div>
+                  <div class="rounded-2xl p-4 flex-1 min-w-[130px] bg-green-600">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[10px] bg-white px-2 py-1 rounded-full text-green-600">
+                        2024/25
+                        </span>
+                        <Image src="./images/more.png" alt="" width="20" height="20" />
+                      </div>
+                      <h1 class="text-2xl font-semibold my-4 text-white">2,100</h1>
+                      <h2 class="capitalize text-sm font-medium text-white">Staffs</h2>
+                  </div>
+                  </div> 
+                </div>
+              </div>
+              <div class="charts flex flex-row w-[100%]">
+                <div class="chart one col-span-1 bg-gray-200 w-[35%]"><span>Students</span>
+                  <div id="chart_div"></div> 
+                </div>
+                <div class="chart two col-span-2 bg-gray-400 w-[65%]"><span>Attendance</span></div>
+                </div>
+                <div id="finance-chart" class="finance">
+              </div>
+
+
+LEFTBAR
+<div class="left border border-red-600">
+            <div class="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
+              <span class="brand text-sm text-[rgb(168,81,138);] font-bold flex flex-row gap-1"><img src="./images/logoo.png" class="logo w-8 h-8 rounded-full" alt="logo"> <p class="mt-2">Ogiba Comprehensive School</p></span>
+              <span class="menu text-sm text-gray-600 mt-5 mb-5">Menu</span>
+              
+              <span class="text-sm text-gray-600 gap 1">
+                    <ul class="flex flex-col gap-3 text-[10px] img:w-2 img:h-2">
+                      <li class="flex flex-row gap-1">
+                        <img src="./images/home.png" class="w-2 h-2" alt="dashboard">
+                        <a href="#">Dashboard</a>
+                      </li> 
+                      <li class="flex flex-row gap-1">
+                        <img src="./images/teacher.png" class="w-6 h-6" alt="donations">
+                        <a href="donations.php">Teachers</a>
+                      </li>
+                      <li class="flex flex-row gap-1">
+                        <img src="./images/student.png" class="w-6 h-6" alt="children">
+                        <a href="students.php">Students</a>
+                        </li>
+                        <li class="flex flex-row gap-1">
+                        <img src="./images/parent.png" class="w-6 h-6" alt="revenue">
+                        <a href="revenue.php">Parents</a>
+                        </li>
+                    <li class="flex flex-row gap-1">
+                        <img src="./images/class.png" class="w-6 h-6" alt="settings">
+                        <a href="settings.php">Classes</a>
+                    </li>
+                    <li class="flex flex-row gap-1">
+                        <img src="./images/lesson.png" class="w-6 h-6" alt="users">
+                        <a href="#">Lessons</a>
+                    </li>
+                    <li class="flex flex-row gap-1">
+                        <img src="./images/exam.png" class="w-6 h-6" alt="users">
+                        <a href="#">Exams</a>
+                    </li>
+                    <li class="flex flex-row gap-1">
+                        <img src="./images/assignment.png" class="w-6 h-6" alt="users">
+                        <a href="#">Assisgnments</a>
+                    </li>
+                    <li class="flex flex-row gap-1">
+                        <img src="./images/attendance.png" class="w-6 h-6" alt="users">
+                        <a href="#">Attendance</a>
+                    </li>
+                    <li class="flex flex-row gap-1">
+                        <img src="./images/calendar.png" class="w-6 h-6" alt="users">
+                        <a href="#">Events</a>
+                    </li>
+                    <li class="flex flex-row gap-1">
+                        <img src="./images/message.png" class="w-6 h-6" alt="users">
+                        <a href="#">Messages</a>
+                        <li class="flex flex-row gap-1">
+                        <img src="./images/announcement.png" class="w-6 h-6" alt="users">
+                        <a href="#">Announcements</a>
+                    </li>
+                </ul>
+            </span>
+            <span class="menu text-sm text-gray-600 mt-5 mb-5">Others</span>
+            <span class="text-sm text-gray-600 gap 1">
+                    <ul class="flex flex-col gap-3">
+                      <li class="flex flex-row gap-1">
+                        <img src="./images/profile.png" class="w-6 h-6" alt="dashboard">
+                        <a href="#">Profile</a>
+                      </li> 
+                      <li class="flex flex-row gap-1">
+                        <img src="./images/setting.png" class="w-6 h-6" alt="donations">
+                        <a href="donations.php">Settings</a>
+                      </li>
+                      <li class="flex flex-row gap-1">
+                        <img src="./images/logout.png" class="w-6 h-6" alt="children">
+                        <a href="children.php">Logout</a>
+                    </li>
+                    </ul>
+            </div>
+
+Array of Menu items<?php
+$menuItems = array(
+    "items"=> array(
+        "icon"=> "/home.png",
+        "label"=> "Home",
+        "href"=> "/",
+        "visible"=> array("admin", "teacher", "student", "parent"),
+    ),
+     "teacher"=> array(
+        "icon"=> "/teacher.png",
+        "label"=> "Teachers",
+        "href"=> "/list/teachers",
+        "visible"=> array("admin", "teacher"),
+      ),
+     "student"=> array(
+        "icon"=> "/student.png",
+        "label"=> "Students",
+        "href"=> "/list/students",
+        "visible"=> array("admin", "teacher"),
+      ),
+      "parent"=> array(
+        "icon"=> "/parent.png",
+        "label"=> "Parents",
+        "href"=> "/list/parents",
+        "visible"=> array("admin", "teacher"),
+      ),
+      "subject"=> array(
+        "icon"=> "/subject.png",
+        "label"=> "Subjects",
+        "href"=> "/list/subjects",
+        "visible"=> array("admin", "teacher"),
+      ),
+      "class"=> array(
+        "icon"=> "/class.png",
+        "label"=> "Classes",
+        "href"=> "/list/classes",
+        "visible"=> array("admin",),
+      ),
+      "lesson"=> array(
+        "icon"=> "/lesson.png",
+        "label"=> "Lessons",
+        "href"=> "/list/lessons",
+        "visible"=> array("admin", "teacher"),
+      ),
+      "exam"=> array(
+        "icon"=> "/exam.png",
+        "label"=> "Exams",
+        "href"=> "/list/exams",
+        "visible"=> array("admin", "teacher", "student", "parent",)
+      ),
+      "assignment"=> array(
+        "icon"=> "/assignment.png",
+        "label"=> "Assignments",
+        "href"=> "/list/assignments",
+        "visible"=> array("admin", "teacher", "student", "parent",)
+      ),
+      "result"=> array(
+        "icon"=> "/result.png",
+        "label"=> "Results",
+        "href"=> "/list/results",
+        "visible"=> array("admin", "teacher", "student", "parent",)
+      ),
+      "attendance"=> array(
+        "icon"=> "/attendance.png",
+        "label"=> "Attendance",
+        "href"=> "/list/attendance",
+        "visible"=> array("admin", "teacher", "student", "parent",)
+      ),
+      "event"=> array(
+        "icon"=> "/calendar.png",
+        "label"=> "Events",
+        "href"=> "/list/events",
+        "visible"=> array("admin", "teacher", "student", "parent",)
+      ),
+      "message"=> array(
+        "icon"=> "/message.png",
+        "label"=> "Messages",
+        "href"=> "/list/messages",
+        "visible"=> array("admin", "teacher", "student", "parent",)
+      ),
+      "announcement"=> array(
+        "icon"=> "/announcement.png",
+        "label"=> "Announcements",
+        "href"=> "/list/announcements",
+        "visible"=> array("admin", "teacher", "student", "parent",)
+      ),
+  ,);
+foreach($menuItems as $i) {echo $i;};
+
+cleaned
+<div className="h-screen flex">
+      {/* LEFT */}
+      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
+        <Link
+          href="/"
+          className="flex items-center justify-center lg:justify-start gap-2"
+        >
+          <Image src="/logo.png" alt="logo" width={32} height={32} />
+          <span className="hidden lg:block font-bold">SchooLama</span>
+        </Link>
+        <Menu />
+      </div>
+      {/* RIGHT */}
+      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll flex flex-col">
+        <Navbar />
+        {children}
+      </div>
+    </div>
+
+    <?php
+// Define the menu items
+$home = array(
+    "icon" => "./images/home.png",
+    "label" => "Home",
+    "href" => "/",
+    "visible" => array("admin", "teacher", "student", "parent"),
+);
+
+$teacher = array(
+    "icon" => "./images/teacher.png",
+    "label" => "Teachers",
+    "href" => "/list/teachers",
+    "visible" => array("admin", "teacher"),
+);
+
+$menuItems = array($home, $teacher);
+
+// Define the user role
+$role = "teacher"; // Replace with the actual user role
+
+// Function to display menu items
+function displayMenu($menuItems, $role) {
+    echo "<ul>";
+    foreach ($menuItems as $item) {
+        if (in_array($role, $item["visible"])) {
+            echo "<li>";
+            echo "<a href='" . $item["href"] . "'>";
+            echo "<img src='" . $item["icon"] . "' alt='" . $item["label"] . "' width='20' height='20' />";
+            echo $item["label"];
+            echo "</a>";
+            echo "</li>";
+        }
+    }
+    echo "</ul>";
+}
+
+// Call the function to display the menu
+displayMenu($menuItems, $role);
+?>
+
+#for admin and teachers
+add exam result for a class
+add or edit CBT exam questions
+#students 
+view available exams to take
+view exams result
+print exams resul
+Punctuality,
+Social interaction,
+Communcation SKills,
+Physical co-ordination and Motor Skills,
+Compliance with rules and regulations,
+Attention and Focus,
+Problem solving and Critical thinking,
+Academic challenges,
+Behavioural challenges,
+Action to deploy upon challenges,
+Lorem ipsum dolor

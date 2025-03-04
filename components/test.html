@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income and Expense Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../tailwindcss.js"></script>
+</head>
+<body>
+    <div class="w-[300px] h-[300px]"> 
+    <div class="bg-white rounded-lg p-4 h-full">
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-semibold">Finance</h1>
+          <img src="./images/finance.png" alt="" width="29" height="20" />
+        </div>
+    <canvas id="incomeExpenseChart" width="200" height="200"></canvas>
+    </div>
+    </div>
+    <script>
+        // Generate random figures for income and expenses
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const income = months.map(() => Math.floor(Math.random() * 10000) + 1000);
+        const expenses = months.map(() => Math.floor(Math.random() * 8000) + 500);
+    
+        // Line Chart
+        const ctx = document.getElementById('incomeExpenseChart').getContext('2d');
+        const incomeExpenseChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: months,
+                datasets: [
+                    {
+                        label: 'Income',
+                        data: income,
+                        borderColor: '#36A2EB',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderWidth: 2,
+                        fill: true
+                    },
+                    {
+                        label: 'Expenses',
+                        data: expenses,
+                        borderColor: '#FF6384',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderWidth: 2,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Amount ($)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Months'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Income and Expense Chart'
+                    }
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
